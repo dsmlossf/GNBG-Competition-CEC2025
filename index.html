@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" async=""
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=AM_CHTML"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="text-justify">
+        <div id="logo">
+            <img src="logo.jpg" alt="">
+            <img src="logo2.jpg" alt="">
+        </div>
+        <!-- <img src="logo.jpg" alt=""> -->
+        <h1 style="margin-bottom: 50px;max-width: 1000px;margin-inline: auto;">
+            GECCO 2024 Numerical Global Optimization Competition on GNBG-generated Test Suite
+        </h1>
+        <article>
+            <header>
+                <h1>
+                    Organizers :
+                </h1>
+            </header>
+            <ul>
+                <li>
+                    <h2>
+                        Amir H. Gandomi
+                    </h2>
+                    <p>
+                        Faculty of Engineering & Information Technology, University of Technology Sydney, Ultimo,
+                        Australia, and University Research and Innovation Center (EKIK), Obuda University, Budapest,
+                        Hungary. <br>Email: <a href="mailto: Gandomi@uts.edu.au"><u>Gandomi@uts.edu.au</u></a>
+                    </p>
+                </li>
+                <li>
+                    <h2>
+                        Kalyanmoy Deb
+                    </h2>
+                    <p>
+                        Department of Electrical and Computer Engineering, Michigan State University, East Lansing, USA.
+                        <br>Email: <a href="mailto: kdeb@egr.msu.edu">kdeb@egr.msu.edu</a>
+                    </p>
+                </li>
+                <li>
+                    <h2>
+                        Danial Yazdani
+                    </h2>
+                    <p>
+                        Data Science Institute, University of Technology Sydney, Ultimo, Australia.
+                        <br>Emails: <a href="mailto: danial.yazdani@uts.edu.au">danial.yazdani@uts.edu.au</a> and <a
+                            href="mailto: danial.yazdani@gmail.com">danial.yazdani@gmail.com</a>
+                    </p>
+                </li>
+                <li>
+                    <h2>
+                        Rohit Salgotra
+                    </h2>
+                    <p>
+                        Faculty of Physics & Applied Computer Science, AGH University of Science & Technology, Poland.
+                        <br>Email: <a href="mailto: rohit.salgotra@agh.edu.pl">rohit.salgotra@agh.edu.pl</a>
+                    </p>
+                </li>
+                <li>
+                    <h2>
+                        Mohammad Nabi Omidvar
+                    </h2>
+                    <p>
+                        School of Computing, University of Leeds, and Leeds University Business School, Leeds LS2 9JT,
+                        UK.
+                        <br>Email: <a href="mailto: m.n.omidvar@leeds.ac.uk">m.n.omidvar@leeds.ac.uk</a>
+                    </p>
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <header>
+                <h1>
+                    Description:
+                </h1>
+            </header>
+            <p>
+                This competition invites researchers to test the mettle of their global optimization algorithms against
+                a
+                meticulously curated set of 24 problem instances from the Generalized Numerical Benchmark Generator
+                (GNBG) <a href="#r1">[1]</a>.
+                This test suite spans a wide array of problem terrains, from smooth unimodal landscapes to intricately
+                rugged multimodal realms. The suite encompasses:
+            </p>
+            <ul>
+                <li>
+                    Unimodal instances (f<sub>1</sub> to f<sub>6</sub>),
+                </li>
+                <li>
+                    Single-component multimodal instances (f<sub>7</sub> to f<sub>15</sub>), and
+                </li>
+                <li>
+                    Multi-component multimodal instances (f<sub>16</sub> to f<sub>24</sub>).
+                </li>
+            </ul>
+            <p>
+                With challenges that include various degrees of modality, ruggedness, asymmetry, conditioning, variable
+                interactions, basin linearity, and deceptiveness, the competition provides a robust assessment of
+                algorithmic capabilities. But this competition is not just about finding optimal solutions. It is about
+                understanding the journey to these solutions. Participants will decipher how algorithms navigate
+                deceptive
+                terrains, traverse valleys, and adapt to the unique challenges posed by each instance. In essence, it is
+                a
+                quest for deeper insights into optimization within complex numerical landscapes. We warmly invite
+                researchers to partake in this competition and subject their global optimization algorithms to this
+                rigorous
+                test.
+            </p>
+        </article>
+
+        <div>
+            <article class="imprtnt">
+                <!-- <header>
+                    <h1>
+                        Box 1:
+                    </h1>
+                </header> -->
+                <p>
+                    <b>
+                        For an in-depth understanding of the problem instances f<sub>1</sub> to f<sub>24</sub>, we
+                        encourage participants to read the comprehensive competition support document. This document 
+                        offers detailed insights into each instance's unique characteristics and complexities. 
+                        To access the document, please download it from:
+                        <a href="https://arxiv.org/abs/2312.07034" style="text-decoration: underline;">A. H. Gandomi, D. Yazdani, M. N. Omidvar, and K. Deb, "GNBG-Generated Test Suite for 
+                            Box-Constrained Numerical Global Optimization," arXiv preprint arXiv:2312.07034, 2023.</a>.
+                    </b>
+                </p>
+            </article>
+            <article class="imprtnt">
+                <!-- <header>
+                    <h1>
+                        Box 2:
+                    </h1>
+                </header> -->
+                <p>
+                    <b>
+                        The <b style="color: red;">MATLAB</b> source code for problem instances f<sub>1</sub> to
+                        f<sub>24</sub>, generated using GNBG is available for download from
+                        <a href="https://github.com/Danial-Yazdani/GNBG_Instances.MATLAB">here</a>.
+                    </b>
+                </p>
+            </article>
+            <article class="imprtnt">
+                <!-- <header>
+                    <h1>
+                        Box 2:
+                    </h1>
+                </header> -->
+                <p>
+                    <b>
+                        The <b style="color: red;">Python</b> source code for problem instances f<sub>1</sub> to
+                        f<sub>24</sub>, generated using GNBG is available for download from
+                        <a href="https://github.com/Danial-Yazdani/GNBG_Instances.Python">here</a>.
+                    </b>
+                </p>
+            </article>
+            <article class="imprtnt">
+                    <!-- <header>
+                        <h1>
+                            Box 2:
+                        </h1>
+                    </header> -->
+                    <p>
+                        <b>
+                            The <b style="color: red;">C++</b> source code for problem instances f<sub>1</sub> to
+                            f<sub>24</sub>, generated using GNBG is available for download from
+                            <a href="https://github.com/VladimirStanovov/GNBG-Instance-C">here</a>.
+                        </b>
+                    </p>
+            </article>
+            <article class="imprtnt">    
+                <!-- <header>
+                    <h1>
+                        Box 3:
+                    </h1>
+                </header> -->
+                <p style="color: black;">
+                    The full description of GNBG can be found in: <a href="https://arxiv.org/abs/2312.07083">D. Yazdani, M. N. Omidvar, D. Yazdani, K. Deb, and A. H. Gandomi, "GNBG: A Generalized
+                        and Configurable Benchmark Generator for Continuous Numerical Optimization," 
+                        arXiv prepring	arXiv:2312.07083, 2023.</a>.
+                </p>
+            </article>
+        </div>
+
+        <figure>
+            <img src="fig1.jpg" alt="fig 1">
+            <img src="fig2.jpg" alt="fig 2">
+            <figcaption>
+                Two 2-dimensional problem spaces generated by GNBG.
+            </figcaption>
+        </figure>
+
+        <article>
+            <header>
+                <h1>Rules and Details:</h1>
+            </header>
+            <ul style="list-style: circle;" id="rules">
+                <li>
+                    The competition is open to all researchers and practitioners in the field of continuous numerical optimization.
+                </li>
+                <li>
+                    Competitors can participate with either newly proposed algorithms (unpublished) or their previously published algorithms.
+                </li>
+                <li>
+                    Winners and runners-up will receive certificates from the conference.
+                </li>
+                <li>
+                    It is not required to attend the conference or register in order to participate in the competition.
+                </li>
+                <li>
+                    No modifications are permitted to parameter settings of the instances in the '.mat' files.
+                </li>
+                <li>
+                    Algorithms' parameter values must be consistent across all problem instances. Parameter tuning
+                    tailored for individual instances is prohibited.
+                </li>
+                <li>
+                    Problem instances must be treated as blackboxes. Direct use of GNBG's internal parameters in
+                    algorithms is forbidden.
+                </li>
+                <li>
+                    Winners will be required to share their algorithm's source code for result verification. This code will remain confidential and won't be published.
+                </li>                
+            </ul>
+        </article>
+
+
+        <article>
+            <header>
+                <h1>
+                    Evaluation Criteria
+                </h1>
+            </header>
+            <p>
+                To assess the performance of optimization algorithms in this competition, three performance indicators
+                are used. These indicators will be calculated based on the outcomes of 31 independent runs for each
+                algorithm on every problem instance:
+            </p>
+            <ol id="criteria">
+                <li>
+                    <b>Average Absolute Error : </b><br>
+                    This metric is calculated as the mean of the absolute errors of the best-found solutions across the
+                    31
+                    runs. It reflects the algorithm's accuracy and consistency in finding solutions close to the global
+                    optimum
+                </li>
+                <li>
+                    <b>Average Function Evaluations (FEs) to Acceptance Threshold : </b><br>
+                    This criterion measures the mean number of FEs required for the algorithm to find a solution with an
+                    absolute error smaller than 10<sup>-8</sup>. It provides insight into the efficiency and convergence speed of
+                    the
+                    algorithm.
+                </li>
+                <li>
+                    <b>Success Rate : </b><br>
+                    Defined as the percentage of runs in which the algorithm successfully finds a solution with an
+                    absolute error less than 10<sup>-8</sup>. This rate is indicative of the algorithm’s reliability and robustness in
+                    consistently reaching high-accuracy solutions.
+                </li>
+            </ol>
+        </article>
+
+        <div>
+            <article class="imprtnt">
+                <!-- <header>
+                    <h1>
+                        Box 1:
+                    </h1>
+                </header> -->
+                <p>
+                    <b>
+                            The stop criteria is reaching the maximum function evaluation number, 
+                            which is indicated in the parameter settings for each instance. 
+                            For f<sub>1</sub> to f<sub>15</sub>, the maximum function evaluation number is 500,000, 
+                            and for f<sub>16</sub> to f<sub>24</sub>, it is 1,000,000.
+                    </b>
+                </p>
+            </article>
+        <div>
+
+        <article>
+            <header>
+                <h1>
+                    Submission Instructions
+                </h1>
+            </header>
+            <p>
+                Participants are required to submit a compressed folder, labeled with the name of their algorithm,
+                containing the following elements:
+            </p>
+            <ul>
+                <li>
+                    Documentation File: This document should include:
+                    <ul style="list-style: circle;">
+                        <li>
+                            Title of the Submission.
+                        </li>
+                        <li>
+                            Names, affiliations, and email addresses of all team members.
+                        </li>
+                        <li>
+                            A concise description of the algorithm.
+                        </li>
+                        <li>
+                            A table presenting the mean and standard deviation of absolute errors and required FEs to
+                            reach the acceptance threshold, based on 31 runs for each problem instance.
+                            <table style="border-collapse: collapse;">
+                                <tr>
+                                    <td rowspan="2">
+                                        Criteria
+                                    </td>
+                                    <td colspan="6">
+                                        Problem instances
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        F1
+                                    </td>
+                                    <td>
+                                        F2
+                                    </td>
+                                    <td>
+                                        F3
+                                    </td>
+                                    <td>
+                                        ...
+                                    </td>
+                                    <td>
+                                        F23
+                                    </td>
+                                    <td>
+                                        F24
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        absolute error (mean and standard deviation)
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        ...
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Required <b>FEs to Acceptance Threshold</b> (mean and standard deviation)
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        ...
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Success rate
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        ...
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Result Files: The folder should also contain 24 text files (one for each problem instance, e.g.,
+                    “f10.dat”). Each file must detail the results of 31 runs, organized in two columns representing the
+                    absolute error and required FEs to reach the acceptance threshold, respectively.
+                </li>
+            </ul>
+            <p>
+                These detailed individual run results will be utilized for a thorough statistical analysis to ascertain
+                the winners.
+            </p>
+            <p>
+                Please ensure that all files are named appropriately and correspond to the respective problem instances.
+                The accuracy and completeness of this data are crucial for a fair and comprehensive evaluation of all
+                entries.
+            </p>
+        </article>
+                                                <article>
+                                                    <header>
+                                                        <h1>Weightage for Decision</h1>
+                                                    </header>
+                                                    <ul style="list-style: circle;">
+                                                        <li>
+                                                            Different problem categories will carry varying weights in the final decision.
+                                                        </li>
+                                                        <li>
+                                                            Multi-component multimodal problems will have the highest weight, followed by single-component multimodal problems, and then unimodal problems with the least weight.
+                                                        </li>
+                                                    </ul>
+                                                </article>
+                                                <div>
+                                                    <article class="imprtnt">
+                                                        <p>
+                                                            <b>For inquiries or further clarification regarding the competition, feel free to reach out to <a href="mailto:danial.yazdani@gmail.com">Danial Yazdani</a>.</b>
+                                                        </p>
+                                                    </article>
+                                                    <article class="imprtnt">
+                                                        <p>
+                                                            <b>Please submit your competition files via email to both Danial Yazdani (<a href="mailto:danial.yazdani@gmail.com">danial.yazdani@gmail.com</a>) and Amir Gandomi (<a href="mailto:Gandomi@uts.edu.au">Gandomi@uts.edu.au</a>).
+                                                                Ensure to include both email addresses in a single email to streamline the submission process. The deadline for submission is 30 June 2024. Upon submission, you will receive an acknowledgement from us confirming the receipt of your files.</b>
+                                                        </p>
+                                                    </article>
+                                                </div>
+                                                <article id="ref">
+                                                    <h1>References</h1>
+                                                    <p>
+                                                        <span id="r1" style="color: blue; text-decoration: underline;"><a href="https://arxiv.org/abs/2312.07083">[1] Danial Yazdani, Mohammad Nabi Omidvar, Delaram Yazdani, Kalyanmoy Deb, Amir H. Gandomi, "GNBG: A Generalized and Configurable Benchmark Generator for Continuous Numerical Optimization," arXiv preprint arXiv:2312.07083, 2023.</a></span>
+                                                    </p>
+                                                </article>
+                                            </main>
+                                        </body>
+                                        </html>
